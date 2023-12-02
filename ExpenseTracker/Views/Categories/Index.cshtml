@@ -1,13 +1,52 @@
 ﻿@model IEnumerable<ExpenseTracker.Models.Category>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["PageTitle"] = "Categories";
+    ViewData["PageActionText"]= "+ New Category";
+    ViewData["PageActionUrl"] = "/Categories/AddOrEdit";
 }
 
-<h1>Index</h1>
+<div class="row">
+    <div class="col-md-15">
+        <ejs-grid id="categories" dataSource="@Model" gridLines="None" allowSorting="true" allowPaging="true"> @*categories listed in index view can be made visible in view using Model*@
+            <e-grid-pagesettings pageSize="5"></e-grid-pagesettings>
+            <e-grid-columns>
+                <e-grid-column headertext="Category" field="TitleWithIcon"></e-grid-column>
+                <e-grid-column headertext="Type" template="#typeColumnTemplate" ></e-grid-column>
+                <e-grid-column headertext="Actions" template="#actionColumnTemplate"></e-grid-column>
+            </e-grid-columns>
+        </ejs-grid>
+    </div>
+</div>
+<script id="typeColumnTemplate" type="text/x-template">
+    ${if(Type=="Income")}
+         <span class="badge bg-success">${Type}</span> @*Type and down CategoryId is from model(first line)*@
+    ${else}
+        <span class="badge bg-danger">${Type}</span>
+    ${/if}
+</script>
+
+<script id="actionColumnTemplate" type="text/x-template">
+   <div class="d-flex flex-row justify-content-start">
+        <a class="btn btn-sm no-a-decoration" href="/Categories/AddOrEdit/${CategoryId}">
+           <i class="fa fa-solid fa-pen fa-lg"></i>
+       </a>
+        <form action="/Categories/Delete/${CategoryId}" method="post">
+            @Html.AntiForgeryToken()
+            <button type="submit" class="btn btn-sm btn-link no-a-decoration"
+            onclick="return confirm(&quot;Are you sure to delete this record?&quot;)">
+                <i class="fa-solid fa-trash-can fa-lg text-danger"></i>
+            </button>
+        </form>
+   </div>
+</script>
+
+
+@*
+    <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="AddOrEdit">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -37,7 +76,7 @@
                 @Html.DisplayFor(modelItem => item.Type)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.CategoryId">Edit</a> |
+                <a asp-action="AddOrEdit" asp-route-id="@item.CategoryId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.CategoryId">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.CategoryId">Delete</a>
             </td>
@@ -45,3 +84,5 @@
 }
     </tbody>
 </table>
+
+*@

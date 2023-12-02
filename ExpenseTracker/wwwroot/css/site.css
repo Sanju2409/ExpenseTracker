@@ -9,10 +9,13 @@ html {
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    font-family: "Global User Interface";
 }
-
+*:not(.fa-solid):not(.fa):not(.e-icons){
+    font-family: "Global User Interface";
+}
 body {
   margin-bottom: 60px;
   background-color:#12161d;
@@ -23,8 +26,42 @@ body {
 .e-bigger{
     font-size:x-large;
 }
+
+/*Grid*/
+.e-grid{
+    border:0;
+    border-radius:5px;
+    tab-size:5;
+}
+/*Button*/
+.btn:focus, .btn:active{
+    outline:none;
+    box-shadow:none;
+}
+.btn.btn-success {
+    color: white;
+}
+.btn.btn-success:hover {
+    color:#fff; /* Change this to the desired color */
+}
+a.btn.btn-success{
+    margin-left:400px;
+    width:45%;
+}
+/*BreadCrumb*/
+.e-breadcrumb a, .e-breadcrumb a:hover{
+    text-decoration:none !important;
+    color:inherit !important;
+}
+/*Hyperlink*/
+.no-a-decoration, .no-a-decoration:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 .e-btn-group.custom-rbt-group {
     width: 100%;
+    
 }
 .e-btn-group.custom-rbt-group .e-btn{
     width: 100%;
@@ -41,4 +78,10 @@ body {
     background-color: #fff;
     color: #212b36;
     border: 1px solid #fff;
+}
+
+/* widget */
+.widget {
+    border-radius: 1rem;
+    background-color:#1a222b;
 }
