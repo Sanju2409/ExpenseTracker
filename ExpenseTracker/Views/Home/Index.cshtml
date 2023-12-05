@@ -1,8 +1,63 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        background-image: url('../Images/Money-bg2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white; /* Set text color to contrast with the background */
+        display: flex;
+        flex-direction: column;
+     
+        overflow-y: scroll;
+        scroll-behavior:smooth;
+        
+       
+    }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+   .home-content {
+    padding: 20px;
+    /* flex: 1; Remove this line */
+}
+.heading{
+        font-weight: 700;
+        line-height: 1.2;
+        position: absolute;
+        right: 0;
+        top: 150px;
+        margin: 0;
+        padding: 30px; 
+        width:40%;
+        color: #004d40;
+       
+        /* Align to the right side of the margin */
+    }
+
+    .heading-p {
+        font-weight: 400;
+        line-height: 1.2;
+        position: absolute;
+        right: 0;
+        top: 320px;
+        margin: 0;
+        padding: 30px;
+        width: 40%;
+        color:#000;
+        /* Align to the right side of the margin */
+    }
+
+</style>
+
+<h1 class="display-4 heading ">Keep track of your Expense here</h1>
+<p class="heading-p">" Money can't buy happiness, but budgeting sure puts a smile on your wallet! "</p>
+<div class="home-bgr">
+    <div class="text-center home-content">
+        <!--<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>-->
+        <!-- Add more content as needed -->
+    </div>
 </div>
