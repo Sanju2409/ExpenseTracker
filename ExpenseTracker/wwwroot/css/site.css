@@ -16,12 +16,16 @@ html {
 *:not(.fa-solid):not(.fa):not(.e-icons){
     font-family: "Global User Interface";
 }
-
-
-body {
+.navbar-expand-sm .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-weight: 700;
+    color: #000;
+}
+    body {
     margin-bottom: 60px;
     background-color: #12161d;
-    color: #fff;
+    color: #000;
     display: flex;
     flex-direction: column;
     overflow-y:sroll;
@@ -51,8 +55,8 @@ body {
     tab-size: 5;
 }
 .navbar-expand-sm .navbar-nav .nav-link {
-    padding-right: 5rem;
-    padding-left: 20rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
     font-weight:700;
     color:#000;
     
@@ -67,7 +71,7 @@ body {
     color: white;
 }
 .btn.btn-success:hover {
-    color:#fff; /* Change this to the desired color */
+    color:#000; /* Change this to the desired color */
 }
 a.btn.btn-success{
     margin-left:400px;
