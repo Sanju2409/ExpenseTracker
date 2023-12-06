@@ -54,9 +54,15 @@ html {
     border-radius: 5px;
     tab-size: 5;
 }
-.navbar-expand-sm .navbar-nav .nav-link {
-    padding-right: 1rem;
+.navbar-expand-sm .navbar-nav .home  {
+    padding-right: 0.5rem;
     padding-left: 1rem;
+    font-weight: 700;
+    color: #000;
+}
+.navbar-expand-sm .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
     font-weight:700;
     color:#000;
     
@@ -113,4 +119,32 @@ a.btn.btn-success{
 .widget {
     border-radius: 1rem;
     background-color:#1a222b;
+}
+.login-logout-crad .card-header {
+    padding: 0px 0px 12px 0px;
+}
+
+.login-logout-card ul.nav-tabs {
+    margin: 0px 0px -12px 0px;
+}
+
+.login-logout-card li.nav-item {
+    width: 50%;
+}
+
+.login-logout-card a.nav-link {
+    font-size: 1rem;
+    color: #258cfb;
+    text-align: center;
+    padding: 1rem;
+}
+
+.login-logout-card .card-body {
+    padding: 10px 20px;
+}
+.card-body{
+    width:100%;
+}
+.row{
+    width:100%;
 }

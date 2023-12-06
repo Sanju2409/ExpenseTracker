@@ -4,12 +4,77 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style>
+    /* Add more advanced styling for the table */
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
 
-<h1>Index</h1>
+    th, td {
+        border: 1px solid #4BACCC;
+        padding: 15px;
+        text-align: left;
+    }
+
+    th {
+        background: linear-gradient(to bottom,#90c89e,#1C632D);
+        color:#000;
+    }
+    td{
+        color: #fff;
+    }
+
+    td.phone {
+        white-space: nowrap;
+        width: 150px; /* Adjust the width as needed */
+    }
+
+    /* Style the links for a better look */
+    a {
+        text-decoration: none;
+        color: #3498db;
+        transition: color 0.3s;
+    }
+
+        a:hover {
+            color: #1d6fa5;
+        }
+
+    /* Add some hover effects for better interactivity */
+    tr:hover {
+        background-color: #0e202d;
+        
+    }
+
+    /* Rounded corners and gradient background for actions column */
+    td.actions {
+        border-radius: 0 10px 10px 0;
+        background: linear-gradient(to right, #3498db, #2980b9);
+    }
+
+        td.actions a {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin-right: 5px;
+            color: #fff;
+            transition: background 0.3s;
+        }
+
+            td.actions a:hover {
+                background: #1d6fa5;
+            }
+</style>
+
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+
 <table class="table">
     <thead>
         <tr>
@@ -44,9 +109,9 @@
                 @Html.DisplayFor(modelItem => item.Phone)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                
             </td>
         </tr>
 }

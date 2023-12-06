@@ -25,11 +25,14 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        @*
+                        <li class="nav-item home">
+                        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+                        *@
+                        
                         <li class="nav-item">
-                            <a class="nav-link " asp-area="" asp-controller="LoginRegisters" asp-action="Index">Login/Register</a>
+                            <a class="nav-link " asp-area="" asp-controller="LoginRegisters" asp-action="Index">User</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Categories" asp-action="Index">Categories</a>
@@ -43,7 +46,7 @@
             <partial name="_LoginPartial"/>
         </nav>
     </header>
-    <div class="container mt-5">
+    <div class="container mt-3">
         <div class="row justify-content-center">
             <div class="col-md-7">
                 <main role="main" class="pb-3">
