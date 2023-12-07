@@ -43,6 +43,9 @@ html {
 .e-bigger .text-white {
         color: white !important; /* Use !important to ensure the style takes precedence */
     }
+.main-content{
+    margin-left:290px;
+}
 .navbar-light .navbar-brand {
     color: #000;
     font-size:40px;
@@ -114,12 +117,43 @@ a.btn.btn-success{
     color: #212b36;
     border: 1px solid #fff;
 }
+#sidebar{
+    background-color:#12161d;
+    border-right: 1px dashed rgba(75,82,85,0.24);
+    padding: 10px 20px;
+}
 
 /* widget */
 .widget {
     border-radius: 1rem;
     background-color:#1a222b;
 }
+    .widget.summary > div:first-child {
+        background-color: #222b33;
+        padding: 1rem;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+
+        .widget.summary > div:first-child i {
+            font-weight: bold;
+        }
+
+    .widget.income > div:first-child {
+        color: #65da41;
+    }
+
+    .widget.expense > div:first-child {
+        color: #ff4e48;
+    }
+
+    .widget.balance > div:first-child {
+        color: #2aa1ff;
+    }
+    .widget.chart {
+        padding: 5px;
+    }
+
 .login-logout-crad .card-header {
     padding: 0px 0px 12px 0px;
 }
